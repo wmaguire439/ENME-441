@@ -1,11 +1,41 @@
-def on():
-	n=1
+import RPi.GPIO as GPIO
+import time
+import math
 
-def off();
-	n=-1
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+timeo = time.time()
+LED = [2,3,4,17,27,22,10,9,11,5]
+f = 0.2
 
-gpio.add_event_detect(pin_num, gpio.RISING, callback=on, bouncetime=100)
-gpio.add_event_detect(pin_num, gpio.FALLING, callback=off, bouncetime=100)
+LED_hold = []
 
+def cb_func(pin):
+	if GPIO
+	global n
+	if GPIO.input(21) == HIGH:
+		n=1
+	else:
+		n=-1
 
-for ()
+GPIO.add_event_detection(21, GPIO.BOTH, callback = cb_func, bouncetime=100)
+
+for i in range(10):
+	GPIO.setup(LED[i], GPIO.OUT)
+	pwm = GPIO.PWM(LED[i], 500)
+	pwm.start(0)
+	LED_hold.append(pwm)
+
+while True:
+	time = time.time()-timeo
+	for i in range(10):
+		B = (math.sin(2*math.pi*f-i*n*math.pi/11))**2
+		bright = B*100
+		LED_hold[i].ChangeDutyCycle(bright)
+
+for i in range(10):
+	LED_hold[i].stop()
+	GPIO.cleanup()
+
+	
+
