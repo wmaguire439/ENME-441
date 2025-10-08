@@ -27,7 +27,7 @@ for i in range(10):
 	LED_hold.append(pwm)
 
 while True:
-	time = time.time()-timeo
+	t = time.time()-timeo
 	for i in range(10):
 		B = (math.sin(2*math.pi*f-i*n*math.pi/11))**2
 		bright = B*100
