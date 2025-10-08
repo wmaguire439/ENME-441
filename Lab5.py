@@ -13,7 +13,7 @@ LED_hold = []
 n=0
 def cb_func(pin):
 	global n
-	if GPIO.input(21) == HIGH:
+	if GPIO.input(21) == 1:
 		n=1
 	else:
 		n=-1
