@@ -17,7 +17,7 @@ def cb_func(pin):
 	else:
 		n=-1
 
-GPIO.add_event_detection(21, GPIO.BOTH, callback = cb_func, bouncetime=100)
+GPIO.add_event_detect(21, GPIO.BOTH, callback = cb_func, bouncetime=100)
 
 for i in range(10):
 	GPIO.setup(LED[i], GPIO.OUT)
