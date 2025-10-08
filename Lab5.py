@@ -29,7 +29,7 @@ for i in range(10):
 while True:
 	t = time.time()-timeo
 	for i in range(10):
-		B = (math.sin(2*math.pi*f-i*n*math.pi/11))**2
+		B = (math.sin(2*math.pi*f*t-i*n*math.pi/11))**2
 		bright = B*100
 		LED_hold[i].ChangeDutyCycle(bright)
 
