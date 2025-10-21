@@ -21,9 +21,9 @@ class Shifter:
         GPIO.output(pin, 0)
 
    def shiftByte(b):
-   			GPIO.output(dataPin, b & (1<<i))
-			ping(clockPin) # add bit to register
-		ping(latchPin) # send register to output
+   		GPIO.output(dataPin, b & (1<<i))
+		ping(clockPin) # add bit to register
+	ping(latchPin) # send register to output
 
      
 
