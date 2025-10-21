@@ -5,7 +5,7 @@ import time
 s1=16
 s2=20
 s3=21
-GPIO.setupmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(s1, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(s2, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(s3, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
