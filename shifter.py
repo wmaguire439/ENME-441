@@ -15,7 +15,6 @@ class Shifter:
         GPIO.setup(self.latchPin, GPIO.OUT)
 
     def __ping(self, pin):
-        """Private method: create a short high pulse on a pin."""
         GPIO.output(pin, 1)
         time.sleep(0)
         GPIO.output(pin, 0)
