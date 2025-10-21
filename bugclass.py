@@ -4,7 +4,7 @@ from shifter import Shifter
 import threading
 
 class Bug:
-	__shifter = Shifter(dataPin=23, clockPin=24, latchPin=25)
+	__shifter = Shifter(serialPin=23, clockPin=24, latchPin=25)
 
 	def __init__(self, x=3, timestep=0.1, isWrapOn= False):
 		self.timestep=timestep
