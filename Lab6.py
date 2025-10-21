@@ -20,8 +20,7 @@ class Shifter:
         time.sleep(0)
         GPIO.output(pin, 0)
 
-   def shiftByte(b): # send a byte of data to the output
-		for i in range(8):
+   def shiftByte(b): # send a byte of data to the output for i in range(8):
 			GPIO.output(dataPin, b & (1<<i))
 			ping(clockPin) # add bit to register
 		ping(latchPin) # send register to output
