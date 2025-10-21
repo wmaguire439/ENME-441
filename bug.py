@@ -20,10 +20,10 @@ try:
 			bug.start()
 		else:
 			bug.stop()
-		if GPIO.input(s3) == 1 && s3_hold==0:
+		if GPIO.input(s3) == 1 & s3_hold==0:
 			bug.timestep = bug.timestep/3
 			s3_hold=1
-		elif GPIO.input(s3) == 0 && s3_hold==1:
+		elif GPIO.input(s3) == 0 & s3_hold==1:
 			bug.timestep = 3*bug.timestep
 			s3_hold=0
 		s2_now = GPIO.input(s2)
