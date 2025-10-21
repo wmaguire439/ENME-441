@@ -18,7 +18,7 @@ class Bug:
 			pattern = 1 << self.x
 			self.__shifter.shiftByte(pattern)
 			led=random.choice([-1,1]) #choose random +1 or -1
-			self.x=x+led
+			self.x += led
 
 			if self.isWrapOn == True:
 				if self.x>7:
