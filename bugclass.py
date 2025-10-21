@@ -38,7 +38,7 @@ class Bug:
 		self.thread = threading.Thread(target = self.walk)
 		self.thread.start()
 
-	def stop(self)
+	def stop(self):
 		self.begin = False
 		self.__shifter.shiftByte(0b00000000)
 
