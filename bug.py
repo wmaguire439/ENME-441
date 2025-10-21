@@ -29,9 +29,9 @@ try:
 		s2_now = GPIO.input(s2)
 		if s2_now != s2_hold:
 			if bug.isWrapOn == True:
-				bug.isWrapOn = False:
+				bug.isWrapOn == False:
 			else:
-				bug.isWrapOn = True:
+				bug.isWrapOn == True:
 
 		time.sleep(0.01)
 
