@@ -21,7 +21,7 @@ class Shifter:
 
 	def shiftByte(self, pattern):
 		for i in range(8):
-			GPIO.output(self.dataPin, pattern & (1<<i))
+			GPIO.output(self.serialPin, pattern & (1<<i))
 			GPIO.output(self.clockPin, 1)
 			time.sleep(0)
 			GPIO.output(self.clockPin, 0) # add bit to register
